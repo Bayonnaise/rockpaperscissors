@@ -33,7 +33,6 @@ img {
 
 .left {
 	float: left;
-	margin-left: 20%
 }
 
 .right {
@@ -44,7 +43,6 @@ img {
   filter: FlipH;
   -ms-filter: "FlipH";
 	float: right;
-	margin-right: 20%
 }
 
 #welcome {
