@@ -4,7 +4,7 @@ require './lib/game'
 
 class RockPaperScissors < Sinatra::Base
   set :views, './views'
-  set :public_dir, './public'
+  # set :public_dir, './public'
   enable :sessions
   set :session_secret, "something"
 
