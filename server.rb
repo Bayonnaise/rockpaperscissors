@@ -3,8 +3,8 @@ require './lib/player'
 require './lib/game'
 
 class RockPaperScissors < Sinatra::Base
-  set :views, '/../views') }
-  set :public_dir, '/../public') }
+  set :views, '/../views')
+  set :public_dir, '/../public')
 
   get '/' do
     erb :index
