@@ -1,24 +1,27 @@
-/*** generic classes ****/
-
 section {
-	width: 600px;
-	height: 100%;
+	padding: 10px;
+	position: center;
+	width: 800px;
+	height: 600px;
 	margin: 0 auto;
 	text-align: center;
+	border: 3px;
+	border-radius: 20px;
 	background-color: white;
 }
 
 body {
+	background-color: green;
+	background-image: url('/images/grey_tile.jpg');
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	font-size: 17px;
 	text-align: center;
-	background-color: lightgrey;
-	background-image: url('/images/grey_tile.jpg');
+	z-index: 1;
 }
 
 h1 {
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-	font-size: 40px;
+	font-size: 50px;
 	text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
 	margin: 10px;
 }
@@ -26,24 +29,15 @@ h1 {
 h2 {
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	font-size: 30px;
-
 }
 
 button {
 	font-size: 15px;
 }
 
-table {
-
-}
-img {
-	
-}
-
-/*** created classes ***/
-
 .left {
 	float: left;
+	z-index: -1;
 }
 
 .right {
@@ -54,14 +48,11 @@ img {
   filter: FlipH;
   -ms-filter: "FlipH";
 	float: right;
+	z-index: -1;
 	}
 
 #welcome {
 	width: 20em;
 	height: 3em;
 	font-size: 80%;
-}
-
-#logo {
-	width: 100%;
 }

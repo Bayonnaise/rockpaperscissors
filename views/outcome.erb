@@ -1,21 +1,20 @@
-<% if !GAME.game_over?%>
-	<% if GAME.winner == "Draw"%>
-		Stalemate!
-	 <% elsif GAME.winner == GAME.players[1] %>
-	 You lost, the computer won with <%= GAME.winner.pick %>
-	<% else %>
-	You won with <%= GAME.winner.pick %> 
+
+	<% if !GAME.game_over?%>
+		<% if GAME.winner == "Draw"%>
+			Stalemate!
+		 <% elsif GAME.winner == GAME.players[1] %>
+		 You lost, the computer won with <%= GAME.winner.pick %>
+		<% else %>
+		You won with <%= GAME.winner.pick %> 
+		<%end%>
 	<%end%>
-<%end%>
-<p>
-<h2>You <%=GAME.players[0].score%> - <%=GAME.players[1].score%> Computer</h2>
+	<p>
+	<h2>You <%=GAME.players[0].score%> - <%=GAME.players[1].score%> Computer</h2>
 
-<p>
+	<% image1 = "/images/#{GAME.players[0].pick.downcase}.jpg" %>
+	<% image2 = "/images/#{GAME.players[1].pick.downcase}.jpg" %>
 
-<% image1 = "/images/#{GAME.players[0].pick.downcase}.jpg" %>
-<% image2 = "/images/#{GAME.players[1].pick.downcase}.jpg" %>
-
-<img src=<%=image1%> class="left" width='50%'>
-<img src=<%=image2%> class="right" width='50%' style='filter:FlipH'>
+	<img src=<%=image1%> class="left" width='50%'>
+	<img src=<%=image2%> class="right" width='50%' style='filter:FlipH'>
 
 
