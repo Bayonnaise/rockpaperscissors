@@ -12,8 +12,8 @@
 
 <p>
 
-<% image1 = "/images/#{GAME.players[0].pick}.jpg" %>
-<% image2 = "/images/#{GAME.players[1].pick}.jpg" %>
+<% image1 = "/images/#{GAME.players[0].pick.downcase}.jpg" %>
+<% image2 = "/images/#{GAME.players[1].pick.downcase}.jpg" %>
 
 <img src=url(<%=image1%>) class="left" width='30%'>
 <img src=url(<%=image2%>) class="right" width='30%' style='filter:FlipH'>
