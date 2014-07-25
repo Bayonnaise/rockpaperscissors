@@ -4,15 +4,16 @@ section {
 }
 
 body {
+	width: 50%;
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	font-size: 17px;
 	text-align: center;
+	margin: 0 auto;
 }
 
 h1 {
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	font-size: 40px;
-	color: saddlebrown;
 	text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
 	margin: 10px;
 }
@@ -27,13 +28,15 @@ button {
 	font-size: 15px;
 }
 
+table {
+
+}
 img {
 	
 }
 
 .left {
 	float: left;
-	margin-left: 30px;
 }
 
 .right {
@@ -44,13 +47,16 @@ img {
   filter: FlipH;
   -ms-filter: "FlipH";
 	float: right;
-	margin-right: 30px;
-}
+	}
 
 #welcome {
 	width: 20em;
 	height: 3em;
 	font-size: 80%;
+}
+
+#logo {
+	width: 100%;
 }
 
 background-image: url('/images/rough_wall.jpg');

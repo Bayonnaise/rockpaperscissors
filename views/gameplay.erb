@@ -9,7 +9,9 @@
 		<button name="pick" value="Scissors">Scissors</button>
 		<input type="hidden" name="name" value=<%=name%>>
 	</form>
+
 <%else%>
+	
 	<p>
 	<% name = GAME.players[0].name %>
 	<% if GAME.players[0].score == 10 %>
@@ -18,7 +20,7 @@
 		Unlucky, beaten by a computer.
 	<%end%>
 
-	<a href='/'><button name="restart">Start again</button></a>
+	<p><a href='/'><button name="restart">Start again</button></a>
 
 <%end%>
 
