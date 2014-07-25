@@ -1,3 +1,5 @@
+/*** generic classes ****/
+
 section {
 	margin: 0 auto;
 	text-align: center;
@@ -34,6 +36,8 @@ table {
 img {
 	
 }
+
+/*** created classes ***/
 
 .left {
 	float: left;
