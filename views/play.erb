@@ -1,4 +1,5 @@
-<h2>Welcome <%= session[:play]%></h2>
+<% name = GAME.players[0].name %>
+<h2>Welcome <%=name%></h2>
 
 Make your choice...
 
@@ -6,5 +7,5 @@ Make your choice...
 	<button name="pick" value="Paper">Paper</button>
 	<button name="pick" value="Rock">Rock</button>
 	<button name="pick" value="Scissors">Scissors</button>
-	<input type="hidden" name="name" value=<%=@name%>>
+	<input type="hidden" name="name" value=<%=name%>>
 </form>

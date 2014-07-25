@@ -1,0 +1,28 @@
+<% if !GAME.game_over? %>
+	<p>
+	<% name = GAME.players[0].name %>
+	Welcome <%=name%>, make your choice...
+
+	<form action="/gameplay" method="POST">
+		<button name="pick" value="Paper">Paper</button>
+		<button name="pick" value="Rock">Rock</button>
+		<button name="pick" value="Scissors">Scissors</button>
+		<input type="hidden" name="name" value=<%=name%>>
+	</form>
+<%else%>
+	<p>
+	<% name = GAME.players[0].name %>
+	<% if GAME.players[0].score == 10 %>
+		Well done, <%=name%>, you won!
+	<% else %>
+		Unlucky, beaten by a computer.
+	<%end%>
+
+	<a href='/'><button name="restart">Start again</button></a>
+
+<%end%>
+
+
+<% if GAME.started? %>
+	<%= erb :outcome %>
+<% end %>

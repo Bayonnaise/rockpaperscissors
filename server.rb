@@ -6,12 +6,14 @@ class RockPaperScissors < Sinatra::Base
   set :views, './views'
   set :public_dir, './public'
   enable :sessions
+  set :session_secret, "something"
 
   configure :production do
     require 'newrelic_rpm'
   end
 
   get '/' do
+    GAME = Game.new
     erb :index
   end
 
@@ -20,27 +22,33 @@ class RockPaperScissors < Sinatra::Base
   end
 
   post '/register' do 
-    @player = params[:name]
-  	erb :play	
+    session[:name] = params[:name]
+    GAME.add(Player.new(params[:name]))
+    GAME.add(Player.new("computer"))
+    erb :gameplay
   end
 
-  post "/play" do
-  	player = Player.new(params[:name])
-  	player.picks = params[:pick]
-  	computer = generate_computer
-  	@game = Game.new(player, computer)
-  	erb :outcome
+  get '/gameplay' do
+    erb :gameplay
   end
 
-  def generate_computer
-  	choice = ["Rock","Paper","Scissors"].sample
+  post "/gameplay" do
+    GAME.start!
+    GAME.players[0].picks = params[:pick]
+  	GAME.players[1].picks = generate_computer_pick
 
-  	comp = Player.new("computer")
-  	comp.picks = choice
-  	comp
+    if GAME.winner == GAME.players[1]
+      GAME.players[1].score += 1
+    elsif GAME.winner == GAME.players[0] 
+      GAME.players[0].score += 1
+    end
+  
+  	erb :gameplay
   end
 
-
+  def generate_computer_pick
+  	["Rock","Paper","Scissors"].sample
+  end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
