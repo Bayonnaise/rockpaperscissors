@@ -6,6 +6,10 @@ class RockPaperScissors < Sinatra::Base
   set :views, './views'
   set :public_dir, './public'
 
+  configure :production do
+    require 'newrelic_rpm'
+  end
+
   get '/' do
     erb :index
   end
