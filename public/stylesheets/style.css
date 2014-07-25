@@ -1,11 +1,52 @@
 head {
 	text-align: center;
+	background-color: white;
 }
 
 body {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 20px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
 	text-align: center;
+	background-color: lightgrey;
 }
 
 h1 {
-	font-size: 50px;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 60px;
+	color: saddlebrown;
+	text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+	margin: 10px;
 }
+
+h2 {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 30px;
+
+}
+
+img {
+	
+}
+
+.left {
+	float: left;
+	margin-left: 10%
+}
+
+.right {
+	-moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+	float: right;
+	margin-right: 10%
+}
+
+
+
+background-image: url('/images/rock-paper-scissors.png');

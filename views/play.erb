@@ -1,6 +1,8 @@
-<h1>Welcome <%= @player%></h1>
+<h2>Welcome <%= session[:play]%></h2>
 
-<form action="/play" method="POST">
+Make your choice...
+
+<p><form action="/play" method="POST">
 	<button name="pick" value="Paper">Paper</button>
 	<button name="pick" value="Rock">Rock</button>
 	<button name="pick" value="Scissors">Scissors</button>

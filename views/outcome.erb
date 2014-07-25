@@ -1,10 +1,16 @@
-RESULTS:
 <% if @game.winner == "Draw" %>
- <h1> It was a draw </h1>
+ <h2> It was a draw </h2>
  <% elsif @game.winner.name == "computer" %>
- <h1> You lost, the computer won with <%= @game.winner.pick %></h1>
+ <h2> You lost, the computer won with <%= @game.winner.pick %></h2>
 <% else %>
-<h1> You won with <%= @game.winner.pick %> </h1>
+<h2> You won with <%= @game.winner.pick %> </h2>
 <%end%>
+<p>
+
+<% image1 = "/images/rock-paper-scissors_(#{@game.player1.pick}).png" %>
+<% image2 = "/images/rock-paper-scissors_(#{@game.player2.pick}).png" %>
+
+<img src=<%=image1%> class="left" width='40%'>
+<img src=<%=image2%> class="right" width='40%' style='filter:FlipH'>
 
 
