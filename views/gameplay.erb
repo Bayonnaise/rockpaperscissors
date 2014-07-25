@@ -14,9 +14,11 @@
 	<p>
 	<% name = GAME.players[0].name %>
 	<% if GAME.players[0].score == 10 %>
-		Well done, <%=name%>, you won!
+		Well done, <%=name%>, you won!<p>
+		I'll beat you next time...
 	<% else %>
-		Unlucky, beaten by a computer.
+		Unlucky, beaten by a computer.<p>
+		Better luck next time...
 	<%end%>
 
 	<p><a href='/'><button name="restart">Start again</button></a>
