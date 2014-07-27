@@ -36,7 +36,7 @@ class Game
 	end
 
 	def game_over?
-		return true if @players[0].score == 10 || @players[1].score == 10
+		return true if @players[0].score == 5 || @players[1].score == 5
 		false
 	end
 end

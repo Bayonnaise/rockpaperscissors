@@ -11,7 +11,8 @@ section {
 
 body {
 	background-color: black;
-	background-image: url('/images/good-guy-trees-cliff.jpg');
+	background-image: url('/images/Epidaurus_Theater.jpg');
+	background-size: 100%;
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	font-size: 17px;
 	text-align: center;
