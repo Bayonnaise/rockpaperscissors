@@ -3,6 +3,8 @@
 
 ## Week 5 Friday challenge:
 
+[Play the final game here.](http://fathomless-plateau-5364.herokuapp.com/ "Rock, paper, scissors")
+
 The task was to take a simple piece of "Rock, Paper, Scissors" code from github, get it working in Sinatra, then deploy it to Heroku in both production and staging environments. Once it was up and running I altered the code to track names and scores and reveal the winner of each round. Then I made it look good with some simple CSS.
 
 ### NewRelic
